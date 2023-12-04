@@ -143,7 +143,7 @@ async function run() {
     //upvote
 
     app.post('/upvotes', async (req, res) => {
-      const upVotes = req.body
+      const upVotes = req.body;
 
       const result = await upVoteCollection.insertOne(upVotes)
       res.send(result)
