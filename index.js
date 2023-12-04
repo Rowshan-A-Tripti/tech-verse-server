@@ -142,7 +142,7 @@ async function run() {
 
     //upvote
 
-    app.post('/upvotes', async (req, res) => {
+    app.post('/upvotes', sync (req, res) => {
       const upVotes = req.body;
 
       const result = await upVoteCollection.insertOne(upVotes)
